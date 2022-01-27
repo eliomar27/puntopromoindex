@@ -1,0 +1,123 @@
+//*estilo de los articulos...
+.a1 {
+  
+  background: url(img/02.jpg);
+  .a1-portada {
+    grid-template-columns: subgrid;
+   // background: #ffcc00;
+    //background: url(img/290.jpg);
+    //background-position-y: -200px  ;
+    grid-column: 1 / span 12;
+    @include fondo;
+    display: grid;
+    height: 400px;
+    picture{
+      z-index: 1;
+      position: absolute;
+      overflow: hidden;
+      height: 400px;
+      width: 100%;
+      img{
+        height: 100%;
+        width: 100%;
+        object-fit:cover;
+       // height: 100px;
+      }
+    }
+    .a1-portada-texto{
+      background: url(img/01.jpg);
+      z-index: 10;
+      grid-column: 2 / span 10;
+      width: 100%;
+      height: 60%;
+      vertical-align: middle;
+      border-radius: 30px;
+      margin-top: 100px;
+      h1 {
+        z-index: 2;
+        text-shadow: 4px 4px 3px #000000;
+        text-align: center;
+        font-size:290%;
+        color: #fff;
+        margin-top: 40px;
+        margin-bottom: 10px;
+      }
+      h2 {
+        margin-top:10px;
+        z-index: 2;
+        text-shadow: 4px 4px 3px #040404;
+        grid-column: 1 / span 12;
+        text-align: center;
+        font-size:200%;
+        color: rgb(248, 248, 248);
+      }
+      h3{
+        @extend h2;
+        padding: 0px;
+        font-size: 150%;
+      }
+    }
+  
+  }
+  .a1-article {
+    grid-template-columns: subgrid;
+    display: grid;
+    grid-column: 1 / span 12;
+    .a1-titulo {
+      grid-column: 1 / span 12;
+      display: grid;
+      grid-template-columns: subgrid;
+      h2 {
+        grid-column: span 8;
+        //*top right bottom left
+        margin: 10px 0px 0px 0px;
+        text-align: center;
+        font-size:200%;
+      }
+    }
+    .a1-parrafo {
+      grid-column: span 8;
+      padding: 0px 20px 0px 20px;
+      display: flex;
+      align-items: center;
+      p {
+        padding: 10px;
+        background: #ffffff80;
+        border-radius: 10px;
+        font-weight:bolder;
+        //*top right bottom left
+        margin: 20px 0px 0px 0px;
+        text-align: justify;
+        font-size:125%;
+        vertical-align: 80%;
+      }
+    }
+    .a1-imagen {
+      grid-column:span 4;
+      padding: 10px;
+      picture{
+        img {
+          object-fit: cover;
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .a1-footer{
+    grid-column: span 12;
+    font-size: 1.75em;
+    background: #ffffff80;
+    ol{
+      li{
+        margin: 10px;
+        span{
+          margin-left: 10px;
+          position: absolute;
+          padding: 0;
+          font-size: 100%;
+        }
+      }
+    }
+  }
+}

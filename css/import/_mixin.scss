@@ -1,0 +1,135 @@
+@mixin fondo {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-blend-mode: difference;
+}
+@mixin imagenes {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background: cover;
+}
+@mixin cutout-text {
+  //*para que funcione tiene que estar el fondo blanco y letras negras
+  font-weight: bold;
+  mix-blend-mode: screen;
+}
+@mixin switch-left {
+  //*wallpaper sol
+  background: #00a1f8;
+  border-radius: 50px;
+  border: none;
+  height: 15px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  outline: none;
+  box-sizing: border-box;
+  &::after {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    border-radius: 50%;
+    transform: translate(0%, -20%);
+    transition: 0.3 ease-out all;
+    background: #ffffff url(svg/sun.svg) no-repeat 50%;
+    border: #00a1f8 solid 2px;
+  }
+  &.active {
+    //*wallpaper luna
+    background: #094977;
+    transform: translate(0%, 0%);
+    &::after {
+      background: #010041 url(svg/moon.svg) no-repeat 50%;
+      transform: translate(45%, -20%);
+      background-position-x: 4px;
+      border: #005291 solid 2px;
+    }
+  }
+}
+@mixin switch-right {
+  border-radius: 50px;
+  height: 20px;
+  width: 50px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  background: #00a1f8 url(svg/expand_more_black_24dp.svg) no-repeat;
+  background-position-x: 26px;
+  background-position-y: -1px;
+  &::after {
+    content: "El";
+    color: #000000;
+    text-align: center;
+    background: #ffffff;
+    font-size: 20px;
+    display: block;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    border-radius: 50%;
+    transform: translate(0%, -10%);
+    border-radius: 50px;
+    transition: 0.3 ease-out all;
+    box-sizing: border-box;
+    border: #004b74 solid 1px;
+  }
+  &.active {
+    .header-menu-desplegable {
+      display: block;
+    }
+  }
+}
+@mixin time {
+  will-change: transform;
+ // transition-property: transform;
+  transition: .5s ease-in-out;
+
+ // transition-delay: 0s;
+ // transition-duration: 0.2s;
+ // transition-delay: 0.2s;
+}
+@mixin menu1 {
+  top: -5px;
+  .menu {
+    background: #1d2f3d;
+    position: sticky;
+    top: 0;
+    div {
+      width: 90%;
+      margin: auto;
+      height: 5%;
+      //*ponerlos en horizontal
+      display: flex;
+      justify-content: space-between;
+      a {
+        text-decoration: none;
+        outline: none;
+        color: #ffcd48;
+        display: inline-block;
+        padding: 20px;
+        width: 100%;
+        text-align: center;
+        transition: 0.3 ease-out all;
+        &:hover {
+          background: #ffcd48;
+          color: #1d2f3d;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+@mixin img {
+  img {
+    max-height: 510px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: -5px;
+  }
+}
+//*En caso de hacer una animacion y querer guardar como queda el elemento usar:
+//  animation-fill-mode: forwards;

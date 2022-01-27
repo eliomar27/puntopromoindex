@@ -1,0 +1,43 @@
+.dark {
+  background: $dark-wallpaper;
+  .contenedor-pagina {
+    .aside {
+      background: $dark-menu;
+      li {
+        span {
+          b {
+            color: $dark-color;
+          }
+        }
+      }
+    }
+    .menu {
+      background: $dark-menu;
+      color: $dark-color;
+    }
+    .header {
+      background: $dark-menu;
+      .perfil{
+        .header-menu-desplegable {
+          background: $dark-menu;
+        }
+      }
+    }
+    .p3 {
+      .p3-grid {
+        .p3-contenedor {
+          border-radius: 5px;
+          background: linear-gradient(145deg, #000262, #000253);
+          box-shadow: 5px 5px 4px #000125, -5px -5px 4px #000393;
+        }
+      }
+    }
+  }
+}
+a {
+  text-decoration-line: none;
+  color: $dark-color;
+  &:hover {
+    color: $dark-color-hover;
+  }
+}

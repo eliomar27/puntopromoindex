@@ -1,0 +1,145 @@
+$texto1: 1.25em;
+$texto2: 1.05em;
+$texto-titulos: 1.5em;
+#js {
+  padding: 20px;
+  background: #000000;
+  color: #00ff00;
+  letter-spacing: 5px;
+  font-size: $texto2;
+  text-transform:capitalize;
+  .pc {
+    color: #adff2f;
+    font-size: $texto1;
+    padding: 5px;
+  }
+  .locas {
+    color: #ffee00;
+    font-size: $texto1;
+    
+  }
+  .telefonos {
+    font-size: $texto2;
+    b {
+      font-size: $texto1;
+      color: #00bbff;
+    }
+    .marca {
+      color: rgb(125, 0, 215);
+      text-align: left;
+    }
+  }
+  .telefonos-gama-alta {
+    @extend .telefonos;
+    color: #ffe100;
+  }
+  .ausencias {
+    color: #ff0000;
+  }
+  .nombre {
+    color: #1800ed;
+  }
+  .parto {
+    width: 200px;
+    height: 200px;
+    animation: 1s alternate explosion;
+    @keyframes explosion {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(2);
+      }
+    }
+  }
+  a {
+    img {
+      width: 400px;
+      height: 400px;
+    }
+  }
+  b {
+    // transform: rotate(20deg);
+    display: block;
+    text-align: center;
+  }
+  .p3-grid {
+    width: $box-size1;
+    margin: 12px;
+    display: inline-block;
+    .p3-contenedor {
+      border-radius: 5px;
+      width: $box-size1 - $box-size2;
+      background: linear-gradient(145deg, #ffffff, #e6e6e6);
+      box-shadow: 5px 5px 4px #666666, -5px -5px 4px #ffffff;
+      display: inline-block;
+      overflow: hidden;
+      .p3-box {
+        width: $box-size1 - $box-size2;
+        height: $box-size1 - $box-size2;
+        picture {
+          img {
+            width: 101%;
+            height: 100%;
+            object-fit: fill;
+            @include time;
+            transform: scale(1.1);
+          }
+        }
+        .p3-categoria {
+          background: #000000cc;
+          width: 101%;
+          height: 110px;
+          text-align: center;
+          transform: translate(0%, -45%);
+          @include time;
+          span {
+            h2 {
+              color: #e6e6e6;
+              text-transform: capitalize;
+              font-size: $texto2;
+              position: relative;
+              font-weight: bolder;
+              padding-bottom: 1.7em;
+            }
+            a {
+              color: #e6e6e6;
+              font-size: $texto2;
+              text-transform: capitalize;
+              h2 {
+                text-transform: capitalize;
+                font-size: $texto2;
+                position: relative;
+                font-weight: bolder;
+              }
+            }
+          }
+        }
+      }
+      &:hover {
+        .p3-box {
+          .p3-categoria {
+            transform: translate(0%, -100%);
+          }
+          .p3-imagen {
+            img {
+              transform: scale(1);
+            }
+          }
+        }
+      }
+    }
+  }
+  .app {
+    color: #ffffff;
+    .titulo-app {
+      color: hsl(31, 98%, 47%);
+      font-size: $texto-titulos;
+      text-align: center;
+
+      &:hover {
+        color: #4369ff;
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.a1 {
+  background: url(img/02.jpg);
+  .a1-portada {
+    .a1-portada-texto {
+      background: url(img/01.jpg);
+      h1 {
+        text-shadow: 4px 4px 3px #000000;
+        color: #fff;
+      }
+      h2 {
+        text-shadow: 4px 4px 3px #040404;
+        color: rgb(248, 248, 248);
+      }
+    }
+  }
+  .a1-article {
+    .a1-parrafo {
+      p {
+        background: #ffffff80;
+      }
+    }
+  }
+  .a1-parrafo {
+    p {
+      background: #ffffff80;
+    }
+  }
+  .a1-footer {
+    background: #ffffff80;
+  }
+}
+.a2 {
+  .a2-portada {
+    .a2-portada-texto {
+      h1 {
+        text-shadow: 4px 4px 3px #000000;
+        color: #fff;
+      }
+      h2 {
+        text-shadow: 4px 4px 3px #040404;
+        color: rgb(248, 248, 248);
+      }
+    }
+  }
+  .a2-footer {
+    background: #ffffff80;
+  }
+}

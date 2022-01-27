@@ -1,0 +1,111 @@
+.a2 {
+  .a2-portada {
+    grid-template-columns: subgrid;
+   // background: #ffcc00;
+    //background: url(img/290.jpg);
+    //background-position-y: -200px  ;
+    grid-column: 1 / span 12;
+    @include fondo;
+    display: grid;
+    height: 400px;
+    picture{
+      z-index: 1;
+      position: absolute;
+      height: 400px;
+      width: 100%;
+      img{
+        height: 100%;
+        width: 100%;
+        object-fit:cover;
+       // height: 100px;
+      }
+    }
+    .a2-portada-texto{
+      z-index: 10;
+      grid-column: 1 / span 12;
+      width: 100%;
+      margin: auto;
+      border-radius: 30px;
+      margin-top: 50px;
+      h1 {
+        z-index: 2;
+        text-shadow: 4px 4px 3px #000000;
+        text-align: center;
+        font-size:400%;
+        color: #fff;
+        margin: 0;
+      }
+      h2 {
+        padding: 20px;
+        z-index: 2;
+        text-shadow: 4px 4px 3px #040404;
+        grid-column: 1 / span 12;
+        text-align: center;
+        font-size:200%;
+        color: rgb(248, 248, 248);
+      }
+    }
+  
+  }
+  .a2-article {
+    grid-column: span 12;
+    display: grid;
+    grid-template-columns: subgrid;
+    padding: 20px;
+    .a2-titulo {
+      grid-column: span 12;
+      display: grid;
+      grid-template-columns:subgrid;
+      h2 {
+        padding: 10px;
+        grid-column: span 8;
+        text-align: center;
+      }
+    }
+    .a2-parrafo{
+      grid-column: span 8;
+      display: flex;
+      align-items: center;
+      text-align: justify;
+      padding: 10px;
+        p{
+
+        }
+    }
+    .a2-imagen{
+      grid-column: span 4;
+      display: flex;
+      align-items: center;
+      height: 100%;
+        picture{
+          display: flex;
+          align-items: center;
+          height: 100%;
+          width: 100%;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                max-height: 300px;
+            }
+        }
+    }
+  }
+  .a2-footer{
+    grid-column: span 12;
+    font-size: 1em;
+    background: #ffffff80;
+    ol{
+      li{
+        margin: 10px;
+        span{
+          margin-top: 5px;
+          margin-left: 10px;
+          position: absolute;
+          padding: 0;
+          font-size: 100%;
+        }
+      }
+    }
+  }
+}

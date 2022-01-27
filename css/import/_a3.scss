@@ -1,0 +1,43 @@
+.a3 {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  .a3-contenedor {
+    filter: contrast(40);
+    background-color: #fff;
+    .a3-box {
+      display: inline-block;
+      width: 150px;
+      height: 150px;
+      background: hotpink;
+      margin: 20px;
+      border-radius: 50%;
+      filter: blur(5px);
+    }
+    .a3-box2 {
+      left: 400px;
+    }
+    .a3-box1 {
+      animation: circle 4s alternate infinite;
+    }
+  }
+
+  @keyframes circle {
+    0% {
+      transform: translate(0);
+    }
+    100% {
+      transform: translate(400px);
+    }
+  }
+.a3-article{
+  .a3-section{
+    direction: rtl;
+    //*ltr | rtl | initial | inherit
+    //*tiene que ver con el flojo del texto
+    letter-spacing: 10px;
+    //*bloquear la seccion de texto por parte del usuario
+    user-select: none;
+  }
+}
+}

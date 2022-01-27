@@ -1,0 +1,66 @@
+//*los "#" son para los id y los "." para los class
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  body {
+    //background: #0d1117;
+    position: sticky;
+    top: 0px;
+    header {
+      @include menu1;
+    }
+    .imagen {
+      @include img;
+    }
+  }
+}
+//*los cambios que van a pasar
+
+#box {
+  min-width: 500px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, $width1);
+  justify-content: space-evenly;
+  //*top right bottom left
+  margin:12px 0px 0px 12px;
+  .box-outside {
+    width: $width1;
+    height: 300px;
+    display: inline-block;
+    .box-inside {
+      box-sizing: border-box;
+      border: rgb(4, 4, 4) solid 5px;
+      width: $width1 - $width2;
+      height: 290px;
+      overflow: hidden;
+      border-radius: 20px;
+      .box-contenedor {
+        picture {
+          img {
+            width: $width1 - $width2;
+            height: 285px;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+}
+.footer {
+  color: #fff;
+  // clear: both;
+  .imagen {
+    a {
+      @include img;
+    }
+  }
+  @include menu1;
+  #menu-footer {
+    position: sticky;
+    bottom: 0;
+  }
+}
